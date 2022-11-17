@@ -1,0 +1,32 @@
+.btn {
+
+	transition: all .5s;
+
+
+	&.btn-primary {
+		color: $color-primary;
+		background-color: $color-secondary;
+
+		&:hover {
+			background-color: darken($color-secondary, 10);
+			//transform: scale(1.05);
+		}
+	}
+
+	&.btn-default {
+		background-color: $color-tertiary;
+
+		&:hover {
+			background-color: darken($color-tertiary, 20);
+			transform: translateY(-.5rem);
+			color: $color-white;
+		}
+	}
+
+
+	&.btn-link {
+		color: $color-white;
+		text-decoration: underline;
+		font-size: 1.7rem;
+	}
+}

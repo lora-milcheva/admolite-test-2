@@ -1,0 +1,35 @@
+.footer {
+	padding: 0 10vw;
+	min-height: 6rem;
+	display: grid;
+	grid-template-columns: 1.1fr 1fr 1.1fr 1fr 1.35fr ;
+	justify-content: stretch;
+	align-items: center;
+
+	background-color: $color-tertiary;
+
+	@include respond('phone') {
+		padding: 5vw;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+
+	& .logo-container {
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		padding: 0 3vw;
+
+		@include respond('tab-port') {
+			padding: 0 2.5vw;
+		}
+
+		@include respond('phone') {
+			padding: 0 4vw;
+
+			&:last-of-type {
+				grid-column-start: 3;
+			}
+		}
+	}
+}

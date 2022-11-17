@@ -1,0 +1,21 @@
+.notification {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateY(-100%);
+
+	visibility: hidden;
+	opacity: 0;
+	background-color: $color-primary;
+	padding: .5rem 1rem;
+	line-height: 1.4;
+	text-transform: none;
+
+	transition: .5s;
+
+	&.visible {
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(-150%);
+	}
+}

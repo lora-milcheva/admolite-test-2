@@ -1,0 +1,7 @@
+.banner {
+	z-index: 2;
+
+	@include respond('phone') {
+		grid-row-start: 1 ;
+	}
+}

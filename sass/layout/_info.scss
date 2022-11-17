@@ -1,0 +1,10 @@
+.info {
+	padding: 8rem 0;
+	text-align: center;
+	z-index: 2;
+
+	@include respond('phone') {
+		padding: 3rem 0;
+	}
+}
+

@@ -1,0 +1,50 @@
+.content {
+	position: relative;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: 1fr 1.5fr;
+	grid-column-gap: 5vw;
+	padding: 0 5vw 0 9vw;
+	background: darkslateblue;
+	@include gradient-bg;
+
+	@include respond('phone') {
+		grid-template-columns: none;
+		padding: 5vw;
+	}
+}
+
+.background-overlay-gradient {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	@include gradient-highlight;
+
+	z-index: 0;
+	opacity: .7;
+}
+
+.background-overlay-image {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+
+	background-image: url("/images/bg_1.png") ;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover; /* Resize the background image to cover the entire container */
+	z-index: 1;
+	opacity: .7;
+}
+
+
+
+
+

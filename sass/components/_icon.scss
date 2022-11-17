@@ -1,0 +1,50 @@
+.icon {
+	display: grid;
+	justify-content: center;
+	grid-row-gap: 1rem;
+
+	&__box {
+		position: relative;
+		width: 6rem;
+		height: 6rem;
+		padding: 1rem;
+		border: 3px solid $color-white;
+		border-radius: 100%;
+
+		@include respond('tab-port') {
+			border: 2px solid $color-white;
+		}
+
+		@include respond('phone') {
+			width: 8rem;
+			height: 8rem;
+		}
+	}
+
+	&__image {
+
+	}
+
+	&__number {
+		position: absolute;
+		bottom: -.5rem;
+		right: -.5rem;
+
+		display: grid;
+		align-items: center;
+		justify-content: center;
+
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 100%;
+		background-color: $color-white;
+
+		font-size: 1.3rem;
+
+	}
+
+	&__text {
+		color: $color-white;
+		text-transform: uppercase;
+	}
+}
