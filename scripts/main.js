@@ -29,20 +29,12 @@ copyBtn.click(function () {
 
     notification.addClass('visible');
     setTimeout( () => notification.removeClass('visible'), notificationCloseDalay)
-
-    copyDivToClipboard()
 });
 
 
 const animate = (element, animation, delay) => {
     setTimeout( () => element.addClass(animation), delay)
     setTimeout( () => element.removeClass(animation), removeClassDelay)
-}
-
-
-// Copy promo code
-function copyDivToClipboard() {
-
 }
 
 
