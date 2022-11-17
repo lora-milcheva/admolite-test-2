@@ -1,5 +1,4 @@
 const copyBtn = $("#copy-btn")
-const promoCode = $("#promo-code")
 const notification = $("#notification")
 
 const depositBtn = $("#deposit-btn")
@@ -20,16 +19,30 @@ const notificationCloseDalay = 2000
 
 // Show notification message when copy button is clicked
 copyBtn.click(function () {
+
+    let range = document.createRange();
+    range.selectNode(document.getElementById("promo-code"));
+    window.getSelection().removeAllRanges(); // clear current selection
+    window.getSelection().addRange(range); // to select text
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();// to deselect
+
     notification.addClass('visible');
     setTimeout( () => notification.removeClass('visible'), notificationCloseDalay)
 
-    console.log(promoCode.text())
+    copyDivToClipboard()
 });
 
 
 const animate = (element, animation, delay) => {
     setTimeout( () => element.addClass(animation), delay)
     setTimeout( () => element.removeClass(animation), removeClassDelay)
+}
+
+
+// Copy promo code
+function copyDivToClipboard() {
+
 }
 
 
